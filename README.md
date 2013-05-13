@@ -35,5 +35,5 @@ Javascript File:
       -It is recommended that you check the origin of the event. However to if you do not need this then remove the 
       URL from here:  resizeCrossDomainIframe('http://dev.localhost.com'); 
       
-I'll add more comments later
-----------
+I'll add more comments later.
+
