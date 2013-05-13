@@ -15,4 +15,25 @@ Script: There is only one script that should be shared across both/all domains. 
 making changes to script easier and convenient. 
       
       
-      sjlwf
+Main Page:
+
+      -Assign any Element with id #mainPage
+      -For each iframe assign it a unique ID. This same ID must be in the hosted iframe.
+      
+
+
+
+iframe Page(each):
+
+      -Assign any Elment with id #iframePage
+      -Declare the iframes unique ID. Example: <input id="iframeID" type="hidden" value="iframeOne">
+      -For each event change that may change the iframe height, run $(iframeResize);
+      -See iframe1.html for example
+
+Javascript File:
+      
+      -It is recommended that you check the origin of the event. However to if you do not need this then remove the 
+      URL from here:  resizeCrossDomainIframe('http://dev.localhost.com'); 
+      
+I'll add more comments later
+----------
