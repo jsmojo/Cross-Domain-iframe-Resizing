@@ -11,8 +11,8 @@ hosted within the iframe. This can be either a sub-domain or different site. In 
 local host with four different sub-domains. I have one main page under http://www.localhost.com that contains 4 
 different iframes from http://dev.localhost.com
 
-Script: There is only one script that should be shared across both/all domains. This is not needed but it makes 
-making changes to script easier and convenient. 
+Script: There is only one script that is shared across both/all domains. This is not needed but it makes 
+making changes to the script easier and convenient. 
       
       
 Main Page:
