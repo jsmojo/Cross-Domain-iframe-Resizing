@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+</head>
+
+<body id="iframePage">
+<input id="iframeID" type="hidden" value="iframeOne">
+<h1>iframe 1</h1>
+
+<button id="add">Copy h1 content</button>  <button id="remove">Remove last h1 content</button> 
+
+</body>
+<script src="http://www.localhost.com/resize.js" type="text/javascript"></script>
+<script>
+$('#add').click(function () {
+	var c = $('h1').last().clone();		  
+	$('h1').last().after(c);
+	$(iframeResize);					  
+});
+$('#remove').click(function () {
+	$('h1').last().remove();				  
+	$(iframeResize);					  
+});
+
+</script>
+</html>
