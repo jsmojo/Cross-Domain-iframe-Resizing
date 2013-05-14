@@ -1,4 +1,4 @@
-Cross-Domain-iframe-Resizing
+Cross-Domain-iframe-Resize
 ============================
 
 To use this script the developer needs access to both domains. 
