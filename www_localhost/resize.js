@@ -1,14 +1,11 @@
-(function() {
+(function () {
     //Load if hosted in iframe
     if ($("#iframePage").length > 0) {
-
         $(iframeResize);
-
     }
 
     //Load if on Main site
     if ($("#mainPage").length > 0) {
-
         //Assign iframe height for IE7 and other browsers that do not support postmessage 
         if (!!window.postMessage) {
             //do nothing
@@ -19,12 +16,10 @@
             $('#iframe4').height(670);
         }
         $(parentIframeResize);
-
     }
 })();
 
 function iframeResize() {
-
     var iframeID = $('#iframeID').attr('value');
     var iframeHeight = '';
 
@@ -33,13 +28,12 @@ function iframeResize() {
     if (!!window.postMessage) {
         parent.postMessage(iframeHeight + iframeID, '*');
     }
-
 }
 
 function resizeCrossDomainIframe(other_domain) {
     if (window.addEventListener) {
 
-        window.addEventListener('message', function(event) {
+        window.addEventListener('message', function (event) {
 
             if (event.origin !== other_domain) return; // only accept messages from the specified domain
 
@@ -55,12 +49,10 @@ function resizeCrossDomainIframe(other_domain) {
                 iframeHeight = iframeHeight + 50; // add some extra height to avoid scrollbar
                 iframeID.height = iframeHeight;
             }
-
         }, false);
-
     } else if (window.attachEvent) {
 
-        window.attachEvent('onmessage', function(event) {
+        window.attachEvent('onmessage', function (event) {
 
             if (event.origin !== other_domain) return; // only accept messages from the specified domain
 
@@ -78,21 +70,16 @@ function resizeCrossDomainIframe(other_domain) {
                 iframeID.height = iframeHeight;
             }
         }, false);
-
-    } else {
-
+    } 
+    else {
         return;
     }
-
 }
 
 function parentIframeResize() {
-
     if (!!window.postMessage) {
-
         resizeCrossDomainIframe('http://dev.localhost.com');
     } else {
         //do nothing
     }
-
 }
